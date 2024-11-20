@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inkatech document django</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #444;
+        }
+        nav a {
+            color: #fff;
+            padding: 1rem;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #555;
+        }
+        main {
+            padding: 2rem;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Hiển thị trang web với với html</h1>
+    </header>
+    <nav>
+        <a href="http://127.0.0.1:8000/">Trang Chủ</a>
+        <a href="http://127.0.0.1:8000/product/">Sản Phẩm</a>
+		<a href="http://127.0.0.1:8000/introduce/">Giới Thiệu</a>
+        <a href="http://127.0.0.1:8000/document/">Tài Liệu</a>
+		<a href="http://127.0.0.1:8000/service/">Dịch Vụ</a>
+   
+    </nav>
+    <main>
+        <h2>Hiển thị trang web với file html</h2>
+		<a>Bước 1: Làm việc với file setting.py </a>
+		<p>Mở file seting.py trong folder mysite con sau đó chèn 'myapp' vào trong INSTALLED_APPS như sau:</p>
+		<p>INSTALLED_APPS = [</p>
+  <p>  ...</p>
+   <p> 'myapp'</p>
+<p>]</p>
+  và save seting </p>
+		<a>Bước 2: Chuẩn bị file html </a>
+		<p>Trong folder myapp tạo 1 folder con có tên là <mark> templates</mark> ta sẽ lưu toàn bộ file html ở folder <mark>templates </mark> tạo 1 file index.html </p>
+		<a>Bước 3: Làm việc với views.py  </a>
+		<p>Trong folder myapp có sẵn 1 file views.py bạn chỉ cần mở file ra và copy đoạn code :</p>
+		 <p><mark>from django.shortcuts import render</mark></p>
+
+		<p><mark>def home(request):</mark></p>
+		<p><mark>return render(request, 'index.html')</mark></p> <p>sau đó ấn save để lưu  </p>
+		
+		<a>Bước 4: Làm việc với file urls.py</a>
+		<p>Sẽ có 2 file urls.py, 1 file nằm trong folder mysite con và 1 file nằm trong folder myapp bạn có thể copy file urls.py có sẵn trong folder mysite con và paste vào folder myapp, rồi sửa. </p>
+		<p>File urls.py nằm trong folder mysite con bạn sửa như sau: </p> <p> <mark>from django.contrib import admin</mark></p>
+<p><mark>from django.urls import path, include</mark> </p>
+<p><mark>urlpatterns = [</mark></p>
+   <p><mark> path('admin/', admin.site.urls),</mark></p>
+  <p><mark>  path('', include('myapp.urls'))</mark> </p>
+    <p><mark> ]</mark> </p>
+  <p>File urls.py nằm trong folder myapp bạn vừa copy từ folder mysite bạn sửa code như sau : </p> 
+<p><mark>from django.urls import path</mark> </p>
+<p><mark>from . import views</mark></p>
+<p><mark>urlpatterns = [</mark></p>
+   <p><mark> path('', views.home, name='home'),</mark></p>
+  <p><mark> ]</mark> </p>
+    <p>sau đó lưu lại </p>
+		<a>Bước 5: Chạy thử trên server </a>
+		<p>Dùng lệnh:  <mark>python manage.py runserver </mark> chạy trên server, test project bằng cách gõ <mark>127.0.0.1:8000</mark>  </p>		
+    </main>
+    <footer>
+        <p>© 2024 Inkatech co</p>
+    </footer>
+</body>
+</html>
+

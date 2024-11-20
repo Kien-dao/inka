@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inka Tech Co</title>
+
+    <style>
+        body {		
+		font-family: sans-serif;
+		font-size: 15px;
+			}
+		#menu ul {
+		background: #8AD385;
+		width: 250px;
+		padding: 0;
+		list-style-type: none;
+		text-align: left;
+			}
+		#menu li {
+		width: auto;
+		height: 40px;
+		line-height: 40px;
+		border-bottom: 1px solid #e8e8e8;
+		padding: 0 1em;
+		position: relative;
+		}
+		#menu li a {
+		text-decoration: none;
+		color: #333;
+		font-weight: bold;
+		display: block;
+		}
+		#menu li:hover {
+		background: #CDE2CD;
+		}
+
+		#menu .sub-menu {
+		position: absolute;
+		left: 250px;
+		top: 0;
+		display: none;
+			}
+		#menu li:hover .sub-menu {
+		display: block;
+			}
+           font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #444;
+        }
+        nav a {
+            color: #fff;
+            padding: 1rem;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #555;
+        }
+        .container {
+            padding: 2rem;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>WELCOME TO INKA TECH Webpage</h1>
+    </header>
+    <nav>
+        <a href="http://127.0.0.1:8000/">Home</a>
+		<a href="http://127.0.0.1:8000/product/">Product</a>
+		<a href="http://127.0.0.1:8000/document/">Document</a>
+        <a href="http://127.0.0.1:8000/about/">About</a>
+        <a href="http://127.0.0.1:8000/contact/">Contact</a>
+    </nav>
+    <div class="container">
+        <h2>About This Page</h2>
+        <p>This is a simple, clean, and beautiful webpage template. You can use it as a starting point for your own projects.</p>
+		<p><div id="menu">
+		
+<ul>
+<li><a href="http://127.0.0.1:8000/document/">Document</a>
+<ul class="sub-menu">
+<li><a href="http://127.0.0.1:8000/document/Django/">Django</a>
+<li><a href="http://127.0.0.1:8000/document/iot/">IOT</a></li>
+<li><a href="http://127.0.0.1:8000/document/linhkien/">linh kiện điện tử</a></li>
+<li><a href="http://127.0.0.1:8000/document/mach/">Mạch điện tử </a></li>
+</ul>
+</li>
+
+</ul>		
+
+</div></p>
+    </div>
+    <footer>
+        <p>© 2024 My Beautiful Webpage</p>
+    </footer>
+</body>
+</html>

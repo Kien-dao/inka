@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inkatech document django</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #444;
+        }
+        nav a {
+            color: #fff;
+            padding: 1rem;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #555;
+        }
+        main {
+            padding: 2rem;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Cài đặt django</h1>
+    </header>
+    <nav>
+        <a href="http://127.0.0.1:8000/">Trang Chủ</a>
+        <a href="http://127.0.0.1:8000/product/">Sản Phẩm</a>
+		<a href="http://127.0.0.1:8000/introduce/">Giới Thiệu</a>
+        <a href="http://127.0.0.1:8000/document/">Tài Liệu</a>
+		<a href="http://127.0.0.1:8000/service/">Dịch Vụ</a>
+   
+    </nav>
+    <main>
+        <h2>Cài đặt django </h2>
+		<a>Bước 1: Cài đặt python </a>
+		<p>Tải python tại trang <a href= " https://www.python.org"> python.org </a> sau đó dùng lệnh<mark> python --version</mark> để kiểm tra version của python  </p>
+		<a>Bước 2: Cài đặt môi trường ảo  </a>
+		<p>Dùng lệnh <mark> python -m venv myenv </mark>    để tạo môi trường ảo  và dùng lệnh <mark>myenv\Scripts\activate</mark> để kích hoạt môi trường ảo </p>
+		<a>Bước 4: Cài đặt django  </a>
+		<p>Dùng lệnh:  <mark>pip install django </mark>để cài đặt django và dùng lệnh:<mark>django-admin --version</mark>  để kiểm tra version </p>
+		<h2>Tạo một dự án web với django</h2>
+		<a>Bước 1: tạo 1 dự án có tên là mysite </a>
+		<p>Dùng lệnh:  <mark>ddjango-admin startproject mysite </mark>để tạo 1 project mysite sau này tất cả các dữ liệu trang web đều nằm trong folder mysite này dùng lệnh:<mark>cd mysite</mark>  để vào folder mysite </p>
+		<a>Bước 2: Chạy thử trên server </a>
+		<p>Dùng lệnh:  <mark>python manage.py runserver </mark> chạy trên server, test project bằng cách gõ <mark>127.0.0.1:8000</mark> vào trình duyệt web bất kỳ ví dụ như chrome </p>	
+		<a>Bước 3: Tạo 1 app có tên là myapp trong project mysite</a>
+		<p>Dùng lệnh:  <mark>python manage.py startapp myapp </mark>rồi vào trong folder mysite để kiểm tra khi có folder myapp xuất hiện là đã thành công trong folder mysite gồm có 2 folder con myapp, mysite và 2 file db.sqlite3, manage.py </p>			
+    </main>
+    <footer>
+        <p>© 2024 Inkatech co</p>
+    </footer>
+</body>
+</html>
+
